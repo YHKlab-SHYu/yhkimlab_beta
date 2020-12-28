@@ -720,23 +720,23 @@ dir1  dir2  dir3
 </code></pre>
 <h3 id="cd-change-directory">cd (change directory)</h3>
 <p>지정된 경로 이동한다. 경로를 지정하는 방법에 대해서는 아래와 같이 크게 두 가지 방식이 있다.</p>
-<ul>
+<ol>
 <li>경로 지정(절대 경로)<blockquote>
 <p><strong>cd</strong>: 홈 디렉토리로 이동</p>
 </blockquote>
 </li>
-</ul>
+</ol>
 <pre><code class="language-bash">$ cd /YHKlab/tmp/dir1
 $ pwd
 /YHKlab/tmp/dir1
 </code></pre>
-<ul>
+<ol>
 <li>경로 지정(상대 경로)<blockquote>
-<p>"cd ../": 하위 디렉토리로 이동
-"cd -": 이전 디렉토리로 이동</p>
+<p><strong>cd ../ </strong>: 하위 디렉토리로 이동
+<strong>cd - </strong>: 이전 디렉토리로 이동</p>
 </blockquote>
 </li>
-</ul>
+</ol>
 <pre><code class="language-bash">$ pwd
 /YHKlab/tmp/dir1
 $ cd ../
@@ -810,9 +810,9 @@ Hellow
 $ cat file2
 World
 </code></pre>
-<ul>
+<ol>
 <li>파일의 합치기(새로운 파일 작성)</li>
-</ul>
+</ol>
 <pre><code>$ cat file1 file2 &gt; file_new
 $ cat file_new
 Hellow World
@@ -821,9 +821,9 @@ Hellow World
 $ cat file_new
 World Hellow
 </code></pre>
-<ul>
+<ol>
 <li>파일의 합치기(덮어쓰기)</li>
-</ul>
+</ol>
 <pre><code>$ cat file1 &gt;&gt; file2 
 $ cat file2
 Hellow World
