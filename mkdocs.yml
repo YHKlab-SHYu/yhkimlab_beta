@@ -11,9 +11,10 @@ markdown_extensions:
 
 pages:
         - Basic Setting:
-                - 'Linux cheat sheet' : 1.Basic_setting/1.1_LinuxCheatSheet.md
-                - 'Emacs cheat sheet' : 1.Basic_setting/1.2_EmacsCheatSheet.md
-                - 'Anaconda cheat sheet' : 1.Basic_setting/1.3_AnacondaCheatSheet.md
+                - 'Linux tutorial' : 1.Basic_setting/1.1_LinuxCheatSheet.md
+                - 'Python tutorial' : 1.Basic_setting/1.2_PythonCheatSheet.md
+                - 'Emacs cheat sheet' : 1.Basic_setting/1.3_EmacsCheatSheet.md
+                - 'Anaconda cheat sheet' : 1.Basic_setting/1.4_AnacondaCheatSheet.md
 
         - DFT Tutorials (SIESTA):
                 - 'Tutorial 0 : Basic SIESTA Calculation': Tutorial_0.md 
