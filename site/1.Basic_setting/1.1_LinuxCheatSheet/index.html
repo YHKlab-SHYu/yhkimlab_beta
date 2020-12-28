@@ -248,6 +248,26 @@
     cd (change directory)
   </a>
   
+    <nav class="md-nav" aria-label="cd (change directory)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    절대 경로 지정
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    상대 경로 지정
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -262,8 +282,7 @@
     mv (move)
   </a>
   
-    <nav class="md-nav" aria-label="mv (move)">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#mkdir-make-directory" class="md-nav__link">
@@ -284,6 +303,21 @@
     cat (concatenate)
   </a>
   
+    <nav class="md-nav" aria-label="cat (concatenate)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    새로운 파일 작성
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    기존 파일에 덮어쓰기
+  </a>
+  
 </li>
         
       </ul>
@@ -297,7 +331,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     기타 명령어
   </a>
   
@@ -636,6 +670,26 @@
     cd (change directory)
   </a>
   
+    <nav class="md-nav" aria-label="cd (change directory)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    절대 경로 지정
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    상대 경로 지정
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -650,8 +704,7 @@
     mv (move)
   </a>
   
-    <nav class="md-nav" aria-label="mv (move)">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#mkdir-make-directory" class="md-nav__link">
@@ -672,6 +725,21 @@
     cat (concatenate)
   </a>
   
+    <nav class="md-nav" aria-label="cat (concatenate)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    새로운 파일 작성
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    기존 파일에 덮어쓰기
+  </a>
+  
 </li>
         
       </ul>
@@ -685,7 +753,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     기타 명령어
   </a>
   
@@ -720,7 +788,7 @@ dir1  dir2  dir3
 </code></pre>
 <h3 id="cd-change-directory">cd (change directory)</h3>
 <p>지정된 경로 이동한다. 경로를 지정하는 방법에 대해서는 아래와 같이 크게 두 가지 방식이 있다.</p>
-<p>(1) 절대 경로 지정</p>
+<h4 id="_1">절대 경로 지정</h4>
 <blockquote>
 <p><strong>cd</strong>: 홈 디렉토리로 이동</p>
 </blockquote>
@@ -728,7 +796,7 @@ dir1  dir2  dir3
 $ pwd
 /YHKlab/tmp/dir1
 </code></pre>
-<p>(2) 상대 경로 지정</p>
+<h4 id="_2">상대 경로 지정</h4>
 <blockquote>
 <p><strong>cd ../ </strong>: 하위 디렉토리로 이동
 <strong>cd - </strong>: 이전 디렉토리로 이동</p>
@@ -774,7 +842,7 @@ file1
 $ ls
 file_changed_name
 </code></pre>
-<h4 id="mkdir-make-directory">mkdir (make directory)</h4>
+<h3 id="mkdir-make-directory">mkdir (make directory)</h3>
 <p>디렉토리 생성한다.</p>
 <blockquote>
 <p>-p 옵션을 주면 하위 디렉토리까지 한 번에 생성 가능</p>
@@ -783,7 +851,7 @@ file_changed_name
 $ ls
 new_dir_name
 </code></pre>
-<h4 id="rm-remove">rm (remove)</h4>
+<h3 id="rm-remove">rm (remove)</h3>
 <p>파일 혹은 디렉토리를 제거한다.</p>
 <blockquote>
 <p>디렉토리를 제거할때는 -r 옵션을 주어야함</p>
@@ -797,7 +865,7 @@ $ rm -r dir
 $ ls
 
 </code></pre>
-<h4 id="cat-concatenate">cat (concatenate)</h4>
+<h3 id="cat-concatenate">cat (concatenate)</h3>
 <p>파일의 내용을 출력한다.</p>
 <pre><code>$ ls
 file1  file2
@@ -807,7 +875,7 @@ $ cat file2
 World
 </code></pre>
 <p><code>cat</code> 명령어를 통해 두 파일의 내용을 합칠 수도 있다.</p>
-<p>(1) 새로운 파일 작성</p>
+<h4 id="_3">새로운 파일 작성</h4>
 <pre><code>$ cat file1 file2 &gt; file_new
 $ cat file_new
 Hellow World
@@ -816,7 +884,7 @@ Hellow World
 $ cat file_new
 World Hellow
 </code></pre>
-<p>(1) 기존 파일에 덮어쓰기</p>
+<h4 id="_4">기존 파일에 덮어쓰기</h4>
 <pre><code>$ cat file1 &gt;&gt; file2 
 $ cat file2
 Hellow World
@@ -825,7 +893,7 @@ Hellow World
 $ cat file1
 World Hellow
 </code></pre>
-<h2 id="_1">기타 명령어</h2>
+<h2 id="_5">기타 명령어</h2>
 <p>지금까지 가장 기초적인 <code>bash</code> 명령어에 대해서 알아보았다. 그 외 기타 명령어는 다음을 참조하자.</p>
 <table>
 <thead>
