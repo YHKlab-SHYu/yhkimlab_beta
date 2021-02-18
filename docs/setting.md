@@ -6,7 +6,7 @@
 
 ## 1. Ubuntu 설치 @ Windows 10 – WSL2
 
-2020. 05. windows 10 update를 통해 **Windows subsystem for Linux 2 (WSL2)**가 정식 설치가 가능해졌습니다. **WSL2**를 이용하면 Windows 10 환경에서 Linux 를 구동할 수 있고 구축된 Linux 환경에서 **Ubuntu**를 설치하여 python code 개발 통합환경인 **Anaconda**를 설치할 수 있습니다. 우선 아래 링크를 참조하여 **WSL2** 및 **Ubuntu** 설치를 진행합니다.
+2020년 05월 windows 10 update를 통해 **Windows subsystem for Linux 2 (WSL2)**가 정식 설치가 가능해졌습니다. **WSL2**를 이용하면 Windows 10 환경에서 Linux 를 구동할 수 있고 구축된 Linux 환경에서 **Ubuntu**를 설치하여 python code 개발 통합환경인 **Anaconda**를 설치할 수 있습니다. 우선 아래 링크를 참조하여 **WSL2** 및 **Ubuntu** 설치를 진행합니다.
 
 WSL2 활성화 및 Linux 설치: [[링크]](https://www.44bits.io/ko/post/wsl2-install-and-basic-usage)
 
