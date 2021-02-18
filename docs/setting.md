@@ -6,7 +6,7 @@
 
 ## 1. Ubuntu 설치 @ Windows 10 – WSL2
 
-2020. 05. windows 10 update`를 통해 **Windows subsystem for Linux 2 (WSL2)**가 정식 설치가 가능해졌습니다. **WSL2**를 이용하면 Windows 10 환경에서 Linux 를 구동할 수 있고 구축된 Linux 환경에서 **Ubuntu**를 설치하여 python code 개발 통합환경인 **Anaconda**를 설치할 수 있습니다. 우선 아래 링크를 참조하여 **WSL2** 및 **Ubuntu** 설치를 진행합니다.
+2020. 05. windows 10 update를 통해 **Windows subsystem for Linux 2 (WSL2)**가 정식 설치가 가능해졌습니다. **WSL2**를 이용하면 Windows 10 환경에서 Linux 를 구동할 수 있고 구축된 Linux 환경에서 **Ubuntu**를 설치하여 python code 개발 통합환경인 **Anaconda**를 설치할 수 있습니다. 우선 아래 링크를 참조하여 **WSL2** 및 **Ubuntu** 설치를 진행합니다.
 
 WSL2 활성화 및 Linux 설치: [[링크]](https://www.44bits.io/ko/post/wsl2-install-and-basic-usage)
 
@@ -114,7 +114,7 @@ Vim 에디터가 열리면 `/open_brower` 을 입력하여 관련 키워드를 �
 
 ![img/Jupyter/Untitled%209.png](img/Jupyter/Untitled%209.png)
 
-발견된 위치에 해당하는 코드의 줄을 다음과 같이 수정합니다(주석 문자 `#` 지움).  이를 통해서  **Jupyter notebook**가 실행될 때 자동으로 브라우져를 실행하지 않도록 할 수 있습니다(참고로 기본 브라우져가 설치된 환경에서는 유용한 설정일 수 있습니다).
+발견된 위치에 해당하는 코드의 줄을 다음과 같이 수정합니다(주석 문자 `#` 지움).  이를 통해서  **Jupyter notebook**가 실행될 때 자동으로 브라우저를 실행하지 않도록 할 수 있습니다(참고로 기본 브라우저가 설치된 환경에서는 유용한 설정일 수 있습니다).
 
 ```python
 c.NotebookApp.open_browser = False
@@ -128,6 +128,6 @@ jupyter notebook
 
 ![img/Jupyter/Untitled%2010.png](img/Jupyter/Untitled%2010.png)
 
-위 명령어를 구동하면 아래와 같이 URLs 정보가 입력됩니다. 이를 복사하여 자신의 브라우져 환경에서 접속하면 **Jupyter notebook**이 실행된 것을 확인 할 수 있습니다.
+위 명령어를 구동하면 아래와 같이 URLs 정보가 입력됩니다. 이를 복사하여 자신의 브라우저 환경에서 접속하면 **Jupyter notebook**이 실행된 것을 확인 할 수 있습니다.
 
 ![img/Jupyter/Untitled%2011.png](img/Jupyter/Untitled%2011.png)
