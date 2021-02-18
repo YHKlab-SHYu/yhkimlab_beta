@@ -1,24 +1,10 @@
-### Tutorial 0: Basic SIESTA Calculation
+## Tutorial 0: Basic SIESTA Calculation
 
 
-####목차
-
-
-
-####   Part 1: 이론적 배경 & siesta 개요
-
-#####이론적배경
-#####SIESTA 개요
-
-####   Part 2: 분자
-
-#####Exercise 1: CH4 분자 구조 최적화
-#####Exercise 2: CH4 분자 basis 확인
-#####Exercise 3: CH3 전자밀도
-
-####Part 1: 이론적 배경 & SIESTA 개요
+###Part 1: 이론적 배경 & SIESTA 개요
 참고문헌: SIESTA homepage (http://www.icmab.es/siesta/)  Documentation Tutorials 
-######이론적배경
+
+####이론적배경
 a. SIESTA에서는 Kohn-Sham 방정식을 푸는 시뮬레이션을 진행한다. Kohn-sham 방정식은 아래와 같다.
 
 
@@ -64,7 +50,7 @@ b. Kohn-Sham DFT(Density Functional Theory)은 화학적 및 재료특성을 예
 
 
 
-####SIESTA 개요
+###SIESTA 개요
  - 위와 같은 DFT 계산을 위해서는 아래와 같은 입력(input) 파일과 실행(executable) 파일이 필요하다. Input 파일은 *.fdf,(RUN.fdf, STRUCT.fdf, KPT.fdf, BASIS.fdf) 와 *psf 가 필요하다.
  - fdf 파일은 파일을 실행시키는데 필요한 정보들을 가지고 있는 파일이며 psf파일은 pseudopotential 정보를 가지고 있는 파일을 뜻한다.
  - 이러한 input 파일을 통해 band structure, PDOS, eigenvalue 등의 결과를 알 수 있다. 
@@ -76,8 +62,8 @@ b. Kohn-Sham DFT(Density Functional Theory)은 화학적 및 재료특성을 예
 
 
 
-####Part 2: 분자
-#####Exercise 1: CH4 분자 구조 최적화
+###Part 2: 분자
+####Exercise 1: CH4 분자 구조 최적화
 DFT 계산을 위해서는 먼저 계산하려는 구조의 최적화가 필요하다
 a. 구조 최적화는 다음과 같은 방식으로 진행된다. 
 
@@ -280,7 +266,7 @@ Murray, and Roger D. Amos. "Study of methane, acetylene, ethene, and benzene usi
 
 
 
-#####Exercise 3: CH3 전자밀도
+###Exercise 3: CH3 전자밀도
 
  a. spin에 따른 전자밀도를 보는 방법은 아래와 같다. Spin 에 따른 전자밀도를 시각화 하기 위해서는 RUN.fdf 에서 아래와 같은 코드를 추가한다.
  b. siesta code
