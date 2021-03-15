@@ -54,14 +54,13 @@ b. STRUCT 파일 구성
 
 계산을 하기위해 위에서 받은 cif파일을 fdf파일로 바꿔줘야한다.
 
-첫번째 방법
-
 ```bash
 $vaspkit
 1
 105
 struct.cif // cif 파일의 이름
 ```
+
 위 순서대로 입력하고 enter를 치면 cif 파일에서 POSCAR 파일이 생성된다.
 
 ```bash
