@@ -52,35 +52,24 @@ b. STRUCT 파일 구성
 
 - 사이트 (<https://materialsproject.org>)에서 원하는 원자 구조를 Primitive Cell 로 받는다.
 
-![03_006](img/03/03_006.jpg)
-
-- Material studio 에서 다운받은 파일을 실행시킨 다음 export에서 msi 로 저장한다.
-
-![03_007](img/03/03_007.jpg)
-
-- Xshell에서 아래그림과 같이 새 파일 전송을 누른다.
-
-![03_008](img/03/03_008.jpg)
-
-- 이제 다운받은 파일을 Xftp에서 드래그를 통해 옮긴 후 다음 커맨드를 입력한다. 
-
-![03_009](img/03/03_009.jpg)
+계산을 하기위해 위에서 받은 cif파일을 fdf파일로 바꿔줘야한다.
 
 첫번째 방법
 
 ```bash
-$vasptools-linux –poscar (material)_mp-492_primitive.msi
-$vi POSCAR
-$vasptools-linux –xyz POSCAR
-$xyz2structfdf_full.py POSCAR.xyz
+$vaspkit
+1
+105
+struct.cif // cif 파일의 이름
 ```
-
-두번째 방법
+위 순서대로 입력하고 enter를 치면 cif 파일에서 POSCAR 파일이 생성된다.
 
 ```bash
-$msi2fdf.sh (material)_mp-492_primitive.msi
-$vi STRUCT.fdf
+$poscar2fdf.py POSCAR
 ```
+
+위 명령어를 치면 POSCAR 파일을 fdf 파일로 변환해준다.
+
 이로서 구조최적화를 하기 전 기본적인 STRUCT.fdf 파일을 만들 수 있다.
 ```bash
 $vi STRUCT.fdf
@@ -108,6 +97,20 @@ AtomicCoordinatesFormat ScaledCartesian
 c.pseudopotentil 파일은 default pseudopotential (ChemicalSpeciesLabel.psf) for each atomic species. (<https://departments.icmab.es/leem/siesta/Databases/Pseudopotentials/periodictable-lda-abinit.html>) 에서 다운 받거나 직접 만들 수 있다. 계산에 필요한 pseudopotential 파일과 BASIS.fdf, KPT.fdf, slm_siesta_run파일은 폴더에 정리해 두었다.
 
 d. 계산을 위한 폴더 만들기
+
+```sh
+├─CH4
+│  │  slm_siesta_run
+│  └─input
+│       BASIS.fdf
+│       C.psf
+│       H.psf
+│       KPT.fdf
+│       RUN.fdf
+│       STRUCT.fdf
+```
+
+계산을 위해 다음과 같은 배치로 파일을 넣어주어야 한다. 이를 수행하기 위한 명령어는 아래와 같다.
 
 ```bash
 $ mkdir ch4(폴더이름) 

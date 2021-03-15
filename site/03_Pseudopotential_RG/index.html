@@ -9,8 +9,8 @@
       
       
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.0.6">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2c0c5eaf.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.7fa14f5b.min.css">
         
       
     
@@ -31,7 +31,7 @@
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
       
     
     
@@ -67,27 +67,25 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="YHKLAB Wiki" class="md-header-nav__button md-logo" aria-label="YHKLAB Wiki">
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="YHKLAB Wiki" class="md-header__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      <div class="md-header-nav__ellipsis">
-        <div class="md-header-nav__topic">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
           <span class="md-ellipsis">
             YHKLAB Wiki
           </span>
         </div>
-        <div class="md-header-nav__topic">
+        <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
               Tutorial 3 : Pseudopotential generations
@@ -96,9 +94,12 @@
         </div>
       </div>
     </div>
+    <div class="md-header__options">
+      
+    </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
@@ -107,10 +108,10 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
       </button>
     </form>
@@ -141,20 +142,18 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 
 
-
-
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki">
+    <a href=".." title="YHKLAB Wiki" class="md-nav__button md-logo" aria-label="YHKLAB Wiki" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
     YHKLAB Wiki
@@ -166,213 +165,202 @@
       
       
 
-
-
   
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" >
-    
-    <label class="md-nav__link" for="nav-1">
-      Basic Setting
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Basic Setting" data-md-level="1">
-      <label class="md-nav__title" for="nav-1">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      <label class="md-nav__link" for="__nav_1">
         Basic Setting
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../setting/" class="md-nav__link">
-      Anaconda installation using Windows subsystem for Linux 2
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2" >
-    
-    <label class="md-nav__link" for="nav-1-2">
-      Cheat sheet
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Cheat sheet" data-md-level="2">
-      <label class="md-nav__title" for="nav-1-2">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Basic Setting" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          Basic Setting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setting/" class="md-nav__link">
+        Anaconda installation using Windows subsystem for Linux 2
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_2" type="checkbox" id="__nav_1_2" >
+      
+      <label class="md-nav__link" for="__nav_1_2">
         Cheat sheet
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../1.Basic_setting/1.1_LinuxCheatSheet/" class="md-nav__link">
-      Linux
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../1.Basic_setting/1.2_PythonCheatSheet/" class="md-nav__link">
-      Python
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../1.Basic_setting/1.3_EmacsCheatSheet/" class="md-nav__link">
-      Emacs
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../1.Basic_setting/1.4_AnacondaCheatSheet/" class="md-nav__link">
-      Anaconda
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  
-
-
-  
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
-    
-    <label class="md-nav__link" for="nav-2">
-      DFT Tutorials (SIESTA)
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="DFT Tutorials (SIESTA)" data-md-level="1">
-      <label class="md-nav__title" for="nav-2">
         <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Cheat sheet" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cheat sheet
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.Basic_setting/1.1_LinuxCheatSheet/" class="md-nav__link">
+        Linux
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.Basic_setting/1.2_PythonCheatSheet/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.Basic_setting/1.3_EmacsCheatSheet/" class="md-nav__link">
+        Emacs
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.Basic_setting/1.4_AnacondaCheatSheet/" class="md-nav__link">
+        Anaconda
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
         DFT Tutorials (SIESTA)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../Tutorial_0/" class="md-nav__link">
-      Tutorial 0 : Basic SIESTA Calculation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../01_GOLD_CHJ/" class="md-nav__link">
-      Tutorial 1 : Au Electronic Structure Calculation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../02_Graphene_CHJ/" class="md-nav__link">
-      Tutorial 2 : Graphene Electronic Structure Calculation
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Tutorial 3 : Pseudopotential generations
         <span class="md-nav__icon md-icon"></span>
       </label>
+      <nav class="md-nav" aria-label="DFT Tutorials (SIESTA)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          DFT Tutorials (SIESTA)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tutorial_0/" class="md-nav__link">
+        Tutorial 0 : Basic SIESTA Calculation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_GOLD_CHJ/" class="md-nav__link">
+        Tutorial 1 : Au Electronic Structure Calculation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_Graphene_CHJ/" class="md-nav__link">
+        Tutorial 2 : Graphene Electronic Structure Calculation
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
-    <a href="./" class="md-nav__link md-nav__link--active">
-      Tutorial 3 : Pseudopotential generations
-    </a>
-    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
       
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tutorial 3 : Pseudopotential generations
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tutorial 3 : Pseudopotential generations
+      </a>
+      
+        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -381,7 +369,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#tutorial-3-pseudopotential-generations" class="md-nav__link">
@@ -474,8 +462,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#practice-au" class="md-nav__link">
-    Practice : Au
+  <a href="#practice-fe" class="md-nav__link">
+    Practice : Fe
   </a>
   
 </li>
@@ -495,165 +483,162 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
     
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
       
       
       
-
-
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
-    
-    <label class="md-nav__link" for="nav-3">
-      DFT Tutorials (VASP)
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="DFT Tutorials (VASP)" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
         DFT Tutorials (VASP)
+        <span class="md-nav__icon md-icon"></span>
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="DFT Tutorials (VASP)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          DFT Tutorials (VASP)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ML-NEB/" class="md-nav__link">
+        Machine learning for nudged elastic band
+      </a>
+    </li>
+  
+
           
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../ML-NEB/" class="md-nav__link">
-      Machine learning for nudged elastic band
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
       
       
       
-
-
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
     
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
-    
-    <label class="md-nav__link" for="nav-4">
-      DFT Platform (NanoCore)
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="DFT Platform (NanoCore)" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon"></span>
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
         DFT Platform (NanoCore)
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../kpoint/" class="md-nav__link">
-      k-point sampling
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-
-  
-  <li class="md-nav__item md-nav__item--nested">
-    
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-2" type="checkbox" id="nav-4-2" >
-    
-    <label class="md-nav__link" for="nav-4-2">
-      Structure optimization
-      <span class="md-nav__icon md-icon"></span>
-    </label>
-    <nav class="md-nav" aria-label="Structure optimization" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-2">
         <span class="md-nav__icon md-icon"></span>
-        Structure optimization
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
+      <nav class="md-nav" aria-label="DFT Platform (NanoCore)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          DFT Platform (NanoCore)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kpoint/" class="md-nav__link">
+        k-point sampling
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Structure optimization
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Structure optimization" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Structure optimization
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nano02_EOS/" class="md-nav__link">
+        Equation of state (EOS) 
+      </a>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../Nano02_EOS/" class="md-nav__link">
-      Equation of state (EOS) 
-    </a>
-  </li>
-
-        
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nano02_3dEOS/" class="md-nav__link">
+        Murnaghan fitting
+      </a>
+    </li>
+  
+
           
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Nano03_GEO/" class="md-nav__link">
+        Geometry optimization
+      </a>
+    </li>
+  
+
           
+        </ul>
+      </nav>
+    </li>
+  
 
-
-
-  <li class="md-nav__item">
-    <a href="../Nano02_3dEOS/" class="md-nav__link">
-      Murnaghan fitting
-    </a>
-  </li>
-
-        
           
-          
-          
-
-
-
-  <li class="md-nav__item">
-    <a href="../Nano03_GEO/" class="md-nav__link">
-      Geometry optimization
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+        </ul>
+      </nav>
+    </li>
+  
 
     
   </ul>
@@ -664,7 +649,7 @@
             
             
               
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -676,7 +661,7 @@
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#tutorial-3-pseudopotential-generations" class="md-nav__link">
@@ -769,8 +754,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#practice-au" class="md-nav__link">
-    Practice : Au
+  <a href="#practice-fe" class="md-nav__link">
+    Practice : Fe
   </a>
   
 </li>
@@ -795,7 +780,7 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
                 
@@ -809,10 +794,12 @@
 - ab-initio pseudopotentials 생성<br />
 - 만들어진 pseudopotential를 통해 원자핵이 미치는 효과 계산<br />
 <code>ATOM</code>를 설치하기 앞서 다음과 같은 패키지를 준비해야한다.  </p>
-<p><code>xmlf90</code> : <a href="https://launchpad.net/libgridxc/+download">https://launchpad.net/libgridxc/+download</a> (1.5.0. 버전)</p>
+<p><code>xmlf90</code> : <a href="https://launchpad.net/xmlf90/+download">https://launchpad.net/xmlf90/+download</a> (1.5.0. 버전)</p>
 <p><code>libGridXC</code> : <a href="https://launchpad.net/libgridxc/+download">https://launchpad.net/libgridxc/+download</a> (0.7.3 버전)</p>
-<p>리눅스 환경에 설치한 후에 다음과 같은 명령어를 통해 압축을 풀어준다.</p>
-<pre><code class="language-bash">$ tar xvzf xmlf90-1.5.0.tgz
+<p>리눅스 환경에 다운로드한 후 압축을 풀어주는 명령어는 다음과 같다.</p>
+<pre><code class="language-bash">$ wget https://launchpad.net/xmlf90/trunk/1.5/+download/xmlf90-1.5.4.tar.gz // 1.5.4버전
+$ wget https://launchpad.net/libgridxc/trunk/0.7/+download/libgridxc-0.7.6.tgz // 0.7.6버전
+$ tar xvzf xmlf90-1.5.0.tgz
 $ tar xvzf libgridxc-0.7.3.tgz
 </code></pre>
 <p>압축을 풀어준 위치에서 다음과 같은 과정을 통해 컴파일을 진행한다.</p>
@@ -821,7 +808,13 @@ $ tar xvzf libgridxc-0.7.3.tgz
 $ mkdir Gfortran
 $ cd Sys
 $ cp gfortran.make ../Gfortran/fortran.mk
-$ cd ../Gfortran
+</code></pre>
+<p>라이브러리를 생성하기 전에 fortran.mk을 다음과 같이 수정해준다.</p>
+<pre><code class="language-bash">LDFLAGS=-mkl=cluster
+AR=/usr/bin/ar
+</code></pre>
+<p>이후 make명령어로 라이브러리를 빌드해준다.</p>
+<pre><code class="language-bash">$ cd ../Gfortran
 $ sh ../config.sh
 $ make
 </code></pre>
@@ -831,10 +824,14 @@ $ make
 $ cd libgridxc-0.7.3
 $ mkdir Gfortran
 $ cd Gfortran
-$ cp ../extra/fortran.mk
+$ cp ../extra/fortran.mk .
 $ sh ../src/config.sh
 $ make clean
 $ make
+</code></pre>
+<p>마찬가지로 make를 하기 전 fortran.mk을 다음과 같이 수정해준다.</p>
+<pre><code class="language-bash">LDFLAGS=-mkl=cluster
+AR=/usr/bin/ar
 </code></pre>
 <p><code>gridxc.mk</code> 생성확인</p>
 <p><code>ATOM</code>를 위한 라이브러리가 준비되었으니 이제 <code>ATOM</code>을 설치한다.<br />
@@ -874,7 +871,7 @@ $ make
 </code></pre>
 <p>생성된 <code>si.ae</code> 위치에 가면 결과 파일들이 생성되어 있다. 결과 파일들에 대한 자세한 설명은 <code>Manual</code> 참조하길 바란다. 
 <code>.gplot</code>, <code>.gps</code> 형식 파일은 <code>gnuplot</code>과 관련한 결과 파일들이다. <code>gnuplot</code> 패키지가 설치되어 있다면 다음과 같은 명령어로 그래프를 생성할 수 있다. (<code>-persist</code> 옵션을 추가하지 않으면 그래프가 유지되지 않는 현상이 있다)</p>
-<pre><code class="language-bash">$ gnuplot -persist 
+<pre><code class="language-bash">$ gnuplot -persist ae.gplot //gplot 파일들을 불러오면 다양한 그래프들을 볼 수 있다.
 </code></pre>
 <h2 id="pseudopotential-generations">Pseudopotential generations</h2>
 <p>다시 <code>/Tutorial</code> 위치로 돌아가서 <code>/PS_Generation</code>에 들어가본다. Pseudopotential를 만들기 위한 예시 파일들이 있다. 우리는 Si을 예시로 살펴본다. <code>Si.tm2.inp</code> 파일을 열어본다.
@@ -900,7 +897,7 @@ $ make
 #2345678901234567890123456789012345678901234567890123456789
 </code></pre>
 <p><code>All_electron</code> 입력 파일과 다른 점은 우선 상단 왼쪽에 위치한 계산 모드가 <code>ae</code>가 아닌 <code>pg</code>로 되어있다는 것이다. 이를 꼭 <code>pg</code>로 수정해야 pseudopotential을 위한 계산을 할 수 있다. 마지막 줄은 6개의 슬롯으로 구성 되어있다. 처음 4개의 값은 각각 s, p, d, f 오비탈의 cut off radius에 해당하고, 마지막 두 값은 추후에 설명할 core corrections와 관련있다. 그 외에 입력 옵션들은 꼭 매뉴얼을 통해 확인하기를 바란다. All-electron과 마찬가지로 쉘 스크립트로 계산을 수행할 수 있는데, Pseudopotential을 만들기 위한 쉘 스크립트는 <code>ae.sh</code>가 아닌 <code>pg.sh</code>이다.  </p>
-<pre><code class="language-bash">$ sh ../Utils/pg.sh Si.tm2.inp
+<pre><code class="language-bash">$ sh ../../Utils/pg.sh Si.tm2.inp
 </code></pre>
 <p><code>SIESTA</code> 프로그램이 입력 파일로 이용할 수 있는 <code>Si.psf</code> 파일이 생성되었다. 여기서 주의할 점은 <code>SIESTA</code>에서는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 따라서 실제 원자의 원자가 오비탈이 l = 3 까지 차 있지 않더라도 전자가 차 있지 않은 가상의 오비탈을 넣고 계산을 돌려야 한다. (위의 경우 3d, 4f)</p>
 <h3 id="core-correction">Core correction</h3>
@@ -1034,11 +1031,11 @@ gnuplot &gt;replot ' PSLOGD1' w l
 </code></pre>
 <p><img alt="04_05" src="../img/04/04_05.JPG" /></p>
 <p>Eigenstate 비교 :  </p>
-<pre><code>$ grep ‘&amp;d’ OUT
+<pre><code>$ grep ‘&amp;v’ OUT
 </code></pre>
 <p><img alt="04_06" src="../img/04/04_06.JPG" /></p>
 <p>위 과정을 통해 <code>Si</code> 원자의 all-electron과 pseudopotential에 대한 여러 전자배치의 <code>total energy</code>와 <code>eigenvalue</code>를 비교하여, transferability를 시험할 수 있다.</p>
-<h3 id="practice-au">Practice : Au</h3>
+<h3 id="practice-fe">Practice : Fe</h3>
 <p>이제 실제 <code>SIESTA</code> 프로그램을 위한 pseudopotential 입력파일을 만들어보자. 위에서 언급했듯 <code>SIESTA</code>는 basis가 되는 오비탈이 (l =3)까지 있어야한다. 이런 점을 만족시키는 pseudopotential generations의 입력파일은 다음 사이트에서 얻을 수 있다. <a href="https://departments.icmab.es/leem/SIESTA_MATERIAL/Databases/Pseudopotentials/periodictable-intro.html">pseudo</a></p>
 <p>위 사이트에 가면 pseudopotential을 만드는 방법으로 <code>LDA</code> (localized density approximation)과 ‘GGA’ (generalized gradient approximation)을 선택할 수 있다. <code>LDA</code> 방법은 <code>Au</code> 원자와 같은 전위금속의 구조를 정확히 예측하지 못한다<a href="https://iopscience.iop.org/article/10.1088/0953-8984/13/42/307/meta">3</a>. 따라서 <code>GGA</code> 방법을 선택하여 <code>Fe</code>의 <code>ATOM</code> 입력파일 (input file for ATOM program)을 설치한다.</p>
 <p><code>Fe.inp</code> :</p>
@@ -1056,7 +1053,7 @@ gnuplot &gt;replot ' PSLOGD1' w l
 #23456789012345678901234567890123456789012345678901234567890      Ruler
 </code></pre>
 <p>입력 파일을 살펴보면 첫번째 줄에 <code>pe</code> 계산모드가 되어있는 것을 확인할 수 있다. 앞서 설명했듯이 이는 pseudopotential generations를 하는데 core correction을 추가한 옵션이다. Core correction를 통해 더욱 안정적으로 pseudopotential을 만들 수 있다.<br />
-두번째 줄은 <code>tm2</code>은 이전에 설명한 transferability를 위해 로그도함수를 시험하기 위한 옵션이다. 또한 세번째 줄에 <code>pb</code> 옵션을 볼 수 있는데, 이는 <code>GGA</code> 방법의 종류로 <code>PBE</code> ((Perdew, Burke, and Ernzerhof) 방법을 의미한다. 다른 방법들은 메뉴얼을 통해서 확인하도록 한다.
+두번째 줄의 <code>tm2</code>은 이전에 설명한 transferability를 위해 로그도함수를 시험하기 위한 옵션이다. 또한 세번째 줄에 <code>pb</code> 옵션을 볼 수 있는데, 이는 <code>GGA</code> 방법의 종류로 <code>PBE</code> ((Perdew, Burke, and Ernzerhof) 방법을 의미한다. 다른 방법들은 메뉴얼을 통해서 확인하도록 한다.
 <code>Au</code>와 같이 원자번호가 큰 금속은 상대론적 효과가 나타난다 (원자핵 주변으로 핵 전자들이 더욱 구속되면서 가림 효과 (shielding effect)가 커지고, d나 f 오비탈의 전자들의 구속력이 약해진다)<a href="https://link.springer.com/article/10.1007/BF03215471">4</a>. 따라서 계산에서도 상대론적 효과를 고려하는 것이 좋다. <code>pb</code> 옵션 뒤에 <code>s</code>를 붙여주면 <code>spin-polarized</code>, <code>non-relativistic</code> 계산을 수행할 수 있고, <code>r</code>를 붙여주면 <code>spin-polarized</code>, <code>relativistic</code> 계산을 수행할 수 있다. <code>pb</code>를 <code>pbr</code>로 바꾸어 주어 상대론적 효과를 고려한 pseudopotential을 만들어보자.</p>
 <pre><code class="language-bash">$ &lt;ATOM 프로그램 위치&gt;/Tutorial/Utils/pg.sh Fe.inp
 </code></pre>
@@ -1081,40 +1078,38 @@ gnuplot &gt;replot ' PSLOGD1' w l
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../02_Graphene_CHJ/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../02_Graphene_CHJ/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Tutorial 2 : Graphene Electronic Structure Calculation
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                Tutorial 2 : Graphene Electronic Structure Calculation
-              </div>
+          </div>
+        </a>
+      
+      
+        <a href="../ML-NEB/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Machine learning for nudged elastic band
             </div>
-          </a>
-        
-        
-          <a href="../ML-NEB/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Machine learning for nudged elastic band
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1124,6 +1119,7 @@ gnuplot &gt;replot ' PSLOGD1' w l
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
     </div>
@@ -1131,19 +1127,13 @@ gnuplot &gt;replot ' PSLOGD1' w l
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fb4a9340.min.js", "version": null}</script>
     
-      <script src="../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
-      
-      <script>
-        app = initialize({
-          base: "..",
-          features: [],
-          search: Object.assign({
-            worker: "../assets/javascripts/worker/search.8c7e0a7e.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+    
+      <script src="../assets/javascripts/bundle.a1c7c35e.min.js"></script>
       
     
   </body>
