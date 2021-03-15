@@ -376,21 +376,28 @@
         
           <li class="md-nav__item">
   <a href="#exercise-1-ch4" class="md-nav__link">
-    Exercise 1: CH4 분자 구조 최적화
+    Exercise 1: CH4 분자 계산 준비
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-2-ch4-basis" class="md-nav__link">
-    Exercise 2: CH4 분자 basis 확인
+  <a href="#exercise-2-ch4" class="md-nav__link">
+    Exercise 2: CH4 분자 구조 최적화
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-3-ch3" class="md-nav__link">
-    Exercise 3: CH3 전자밀도
+  <a href="#exercise-3-ch4-basis" class="md-nav__link">
+    Exercise 3: CH4 분자 basis 확인
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-ch3" class="md-nav__link">
+    Exercise 4: CH3 전자밀도
   </a>
   
 </li>
@@ -658,21 +665,28 @@
         
           <li class="md-nav__item">
   <a href="#exercise-1-ch4" class="md-nav__link">
-    Exercise 1: CH4 분자 구조 최적화
+    Exercise 1: CH4 분자 계산 준비
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-2-ch4-basis" class="md-nav__link">
-    Exercise 2: CH4 분자 basis 확인
+  <a href="#exercise-2-ch4" class="md-nav__link">
+    Exercise 2: CH4 분자 구조 최적화
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#exercise-3-ch3" class="md-nav__link">
-    Exercise 3: CH3 전자밀도
+  <a href="#exercise-3-ch4-basis" class="md-nav__link">
+    Exercise 3: CH4 분자 basis 확인
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercise-4-ch3" class="md-nav__link">
+    Exercise 4: CH3 전자밀도
   </a>
   
 </li>
@@ -722,7 +736,7 @@
 </ul>
 <p><img alt="03_004" src="../img/03/03_004.jpg" /></p>
 <h2 id="part-2">Part 2: 분자</h2>
-<h3 id="exercise-1-ch4">Exercise 1: CH4 분자 구조 최적화</h3>
+<h3 id="exercise-1-ch4">Exercise 1: CH4 분자 계산 준비</h3>
 <p>DFT 계산을 위해서는 먼저 계산하려는 구조의 최적화가 필요하다.</p>
 <p>a. 구조 최적화는 다음과 같은 방식으로 진행된다. </p>
 <p><img alt="03_005" src="../img/03/03_005.jpg" /></p>
@@ -732,20 +746,21 @@
 </ul>
 <p>b. STRUCT 파일 구성 </p>
 <ul>
-<li>사이트 (<a href="https://materialsproject.org">https://materialsproject.org</a>)에서 원하는 원자 구조를 Primitive Cell 로 받는다.</li>
+<li>사이트(https://materialsproject.org)에서 원하는 원자 구조를 Primitive Cell 로 받는다.</li>
 </ul>
+<p><img alt="Screenshot" src="../img/0-05.png" /></p>
 <p>계산을 하기위해 위에서 받은 cif파일을 fdf파일로 바꿔줘야한다.</p>
-<pre><code class="language-bash">$vaspkit
+<pre><code class="language-bash">$ vaspkit
 1
 105
 struct.cif // cif 파일의 이름
 </code></pre>
 <p>위 순서대로 입력하고 enter를 치면 cif 파일에서 POSCAR 파일이 생성된다.</p>
-<pre><code class="language-bash">$poscar2fdf.py POSCAR
+<pre><code class="language-bash">$ poscar2fdf.py POSCAR 
 </code></pre>
 <p>위 명령어를 치면 POSCAR 파일을 fdf 파일로 변환해준다.</p>
 <p>이로서 구조최적화를 하기 전 기본적인 STRUCT.fdf 파일을 만들 수 있다.</p>
-<pre><code class="language-bash">$vi STRUCT.fdf
+<pre><code class="language-bash">$ vi STRUCT.fdf
 NumberOfAtoms    5           # Number of atoms
 NumberOfSpecies  2           # Number of species
 %block ChemicalSpeciesLabel
@@ -786,49 +801,68 @@ slm_siesta_run을 ch4 폴더에 복사
 $ mkdir input(폴더이름)
 $ cd input 
 C.psf, H.psf, RUN.fdf, STRUCT.fdf, KPT.fdf, BASIS.fdf 파일을 input 폴더에 복사
-$  cd ..
-$ sbatch slm_siesta_run
-</code></pre>
-<p>구조최적화를 위해서는 계산된 결과(OUT)를 통해 새로운 입력(input) 파일을 생성하여 새로운 계산을 실행해야 한다. </p>
-<pre><code class="language-bash">$ cd input
-$ siesta2xyz.py STRUCT.fdf
-$ vi STRUCT.xyz
-셀정보를 복사(아래그림의 빨간색 영역)
-</code></pre>
-<p><img alt="03_010" src="../img/03/03_010.jpg" /></p>
-<pre><code class="language-bash">$ cd ..
-$ cd OUT
-$ vi Test.xyz(cell정보가 포함되어 있는 파일)
-셀정보를 붙여넣기
-
-$ xyz2fdf_cell.py Test.xyz
-$ cd ../../
-$ cp Text.fdf ../input/
-새로운 STRUCT.fdf 파일 생성
-$ cp Text.fdf STRUCT.fdf
-$ cd ..
-$ cd input
-$ vi RUN.fdf
-MD.NumberCGstep을 0으로 바꾼다.
 $ cd ..
 $ sbatch slm_siesta_run
 </code></pre>
-<p>STRUCT.fdf 파일 시각화를 통해 구조최적화 전후의 bonding length 와 bonding angle이 달라짐을 확인 할 수 있다. </p>
-<pre><code class="language-bash">$ cd (OUT directory)
-$ xyz2fdf_cell.py STRUCT.fdf (STRUCT.fdf 파일을 xyz 파일로 변환)
+<h3 id="exercise-2-ch4">Exercise 2: CH4 분자 구조 최적화</h3>
+<p>Exercise 1에서 주어진 STRUCT.fdf 파일은 이미 최적화가 완료된 파일이다. 이번에는 CH4의 틀린 구조를 입력으로 넣고 계산을 통해 올바른 구조가 도출되게 됨을 확인해 볼 것이다.<br />
+CH4는 결합의 길이가 모두 같음이 알려져 있다. Exercise 1의 STRUCT.fdf파일도 결합 길이가 모두 같으므로 H 하나의 결합길이를 임의로 늘린 STRUCT.fdf파일을 입력으로 사용할 것이다.</p>
+<pre><code class="language-bash">NumberOfAtoms    5           # Number of atoms
+NumberOfSpecies  2           # Number of species
+%block ChemicalSpeciesLabel
+ 1 6 C
+ 2 1 H
+%endblock ChemicalSpeciesLabel
+LatticeConstant      40.000000000 Ang
+%block LatticeVectors
+    1.000000000     0.000000000     0.000000000
+    0.000000000     1.000000000     0.000000000
+    0.000000000     0.000000000     1.000000000
+%endblock LatticeVectors
+AtomicCoordinatesFormat ScaledCartesian
+%block AtomicCoordinatesAndAtomicSpecies
+    -0.000206800    -0.000206800    -0.000188525    1    1
+     0.025718150    -0.006302475    -0.007980825    2    2
+    -0.006302475     0.025718150    -0.007980825    2    3
+    -0.002297125    -0.002297125     0.027402550    2    4
+    -0.017873200    -0.017873200    -0.012210550    2    5
+%endblock AtomicCoordinatesAndAtomicSpecies
+</code></pre>
+<p>우선적으로 부정확한 STRUCT.fdf의 구조를 보도록 하자. STRUCT.fdf파일을 바로 볼 수는 없어서 fdf파일을 xyz로 바꾸고 xcrysen을 통해 분자구조를 확인할 것이다.</p>
+<pre><code class="language-bash">$ cd (input directory)
+$ fdf2xyz.py STRUCT.fdf (STRUCT.fdf 파일을 xyz 파일로 변환) 
 $ xyz2xcrysden.py STRUCT.xyz
 </code></pre>
-<p>Display-Unit of Repetition-Translational asymmetric unit 선택</p>
+<p><strong>Display-Unit of Repetition-Translational asymmetric unit 선택</strong><br />
+(이를 반드시 해줘야 원자 구조를 알아볼 수 있다.)</p>
 <p><img alt="03_011" src="../img/03/03_011.jpg" /></p>
 <p>Distance 선택 후 원자 두개를 선택한 후 Done을 선택하면 Distance를 알 수 있다.</p>
 <p><img alt="03_012" src="../img/03/03_012.jpg" /></p>
 <p>Angle 선택 후 원자 세개를 선택한 후 Done을 선택하면 Angle을 알 수 있다.</p>
 <p><img alt="03_013" src="../img/03/03_013.jpg" /></p>
-<blockquote>
-<p>구조 최적화 전 bonding length : 1.30719 Ang, bonding angle : 108.7856 deg
-구조 최적화 된 bonding length : 1.10977 Ang, bonding angle : 109.4914 deg</p>
-</blockquote>
-<h3 id="exercise-2-ch4-basis">Exercise 2: CH4 분자 basis 확인</h3>
+<p>이 방법을 통해 input에 들어가 있는 STRUCT.xyz의 결합 길이를 보도록 하자.</p>
+<p><img alt="03_010" src="../img/03/03_017.png" /></p>
+<p>그림에서 볼 수 있듯이 CH4 분자의 왼쪽 H가 다른 분자보다 0.001 Ang 더 짧음을 알 수 있다.<br />
+이 STRUCT.fdf파일을 input 폴더에 넣는다. 계산을 위해 RUN.fdf와 BASIS.fdf를 수정해준다.</p>
+<pre><code class="language-bash">$ cd input
+$ vi RUN.fdf
+MD.NumberCGstep을 300으로 바꾼다.
+$ vi BASIS.fdf
+PAO.BasisSize를 SZ로 바꾼다.
+$ cd ..
+$ sbatch slm_siesta_run
+</code></pre>
+<p>MD.NumberCGstep은 계산의 최대 iteration 횟수를 설정해주는 것이다. 300번 계산을 돌려도 값이 수렴하지 않으면 프로그램을 끝낸다. BasisSize는 빠른 구조확인을 위해 정확도는 떨어지지만 빠른 SZ로 설정해준다.
+계산을 완료하면 OUT폴더에 계산이 끝난 파일인 Test.xyz를 확인할 수 있다. 이 파일이 구조 최적화 된 결과이다.<br />
+Test.xyz를 xcrysden으로 계산된 구조를 확인해보도록 하자. 그 전에 Test.xyz에는 Cell정보가 포함되어 있지 않다. 따라서 xcrysden으로 바로 읽어올 수 없다. input에 있는 STRUCT.xyz파일의 Cell정보를 Test.xyz에 복사해준다.</p>
+<p><img alt="03_010" src="../img/03/03_010.jpg" /></p>
+<p>Cell정보 복사가 완료되면 xcrysden으로 Test.xyz의 분자구조를 확인해보자.</p>
+<pre><code class="language-bash">$ cd (Output directory)
+$ xyz2xcrysden.py Test.xyz
+</code></pre>
+<p><img alt="03_010" src="../img/03/03_017.png" /></p>
+<p>input의 결합길이가 0.001 Ang 차이났던 것과 달리 계산된 결과는 0.0001 Ang 수준으로 차이가 줄었다. 따라서 최적화된 구조가 형성되었음을 확인해볼 수 있다. C와 H간 분자간 길이가 1.2 Ang으로 Exercise 3의 결과와 거의 일치함도 확인해볼 수 있다.</p>
+<h3 id="exercise-3-ch4-basis">Exercise 3: CH4 분자 basis 확인</h3>
 <p>구조최적화를 위와 같이 진행 한 후에는 Basis 확인를 통해 사용한 Basis가 적절한지 테스트를 한다. Basis 테스트는 구조최적화가 완료된 구조에서 각 Basis 별로 계산을 진행하여 안정된 에너지를 가지는 Basis를 선택하면 된다. </p>
 <ul>
 <li>Siesta code</li>
@@ -872,14 +906,14 @@ Test.xyz 파일을 바탕화면에 옮기고 Vesta 툴을 사용하여 xyz 파�
 <tr>
 <td><code>Bonding angle [degree]</code></td>
 <td align="center">109.4398</td>
-<td align="center">1.091358</td>
+<td align="center">109.1358</td>
 <td align="center">109.1567</td>
 <td align="center">109.4914</td>
 <td align="right">109.3702</td>
 </tr>
 </tbody>
 </table>
-<h3 id="exercise-3-ch3">Exercise 3: CH3 전자밀도</h3>
+<h3 id="exercise-4-ch3">Exercise 4: CH3 전자밀도</h3>
 <p>a. spin에 따른 전자밀도를 보는 방법은 아래와 같다. Spin 에 따른 전자밀도를 시각화 하기 위해서는 RUN.fdf 에서 아래와 같은 코드를 추가하여야한다</p>
 <pre><code class="language-bash">%include STRUCT.fdf
 %include BASIS.fdf
