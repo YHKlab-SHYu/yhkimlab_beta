@@ -19,6 +19,7 @@ markdown_extensions:
 pages:
         - Basic Setting:
                 - 'Anaconda installation using Windows subsystem for Linux 2' : setting.md
+                - 'Editor : VsCode' : Vscode.md
                 - 'Cheat sheet' :
                         - 'Linux' : 1.Basic_setting/1.1_LinuxCheatSheet.md
                         - 'Python' : 1.Basic_setting/1.2_PythonCheatSheet.md

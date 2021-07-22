@@ -321,4 +321,3 @@ A : Ang or Bohr
 0 0 5 : x y z 방향 벡터를 통해 구성되는 시스템의 크기를 정의
 100 100 100 : 방향에 따른 grid points 정의
 RHO : 변환되는 grid 파일 
-
