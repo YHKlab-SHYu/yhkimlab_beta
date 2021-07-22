@@ -109,7 +109,13 @@ VsCode에 설치된 확장과 설치할 수 있는 extension들을 표시한다.
 
 ![vs_009](img/vscode/확장.gif)
 
-필수 설치 확장 리스트
+Remote Development를 설치한 경우 설치된 extension이 로컬과 호스트의 extension으로 나뉘고, 각자 분리되서 설치된다. 따라서, 서버에서 extension을 사용하고 싶다면 서버에도 extension을 따로 설치 해주어야 한다.
+
+![vs_009](img/vscode/확장2.PNG)
+
+extension이 로컬에는 설치되어있지만 서버에는 설치되어있지 않다면 <u>SSH : iron.kaist.ac.kr에 설치</u> 버튼이 있다. 이를 누르면 따로 찾을 필요 없이 서버에 그 extension이 바로 설치되고 서버에서도 로컬에서 사용했던 기능들을 사용할 수 있다.
+
+추천 extension 리스트
 
 * korean language pack
 * python
